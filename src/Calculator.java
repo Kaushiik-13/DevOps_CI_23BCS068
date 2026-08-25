@@ -23,6 +23,10 @@ public final class Calculator {
         return left * right;
     }
 
+    public static double modulo(double left, double right) {
+        return left % right;
+    }
+
     public static double divide(double left, double right) {
         if (right == 0.0) {
             throw new IllegalArgumentException("Division by zero is not allowed");
@@ -36,7 +40,7 @@ public final class Calculator {
             System.out.println(APP_BANNER);
             System.out.print("Enter the first number: ");
             double left = scanner.nextDouble();
-            System.out.print("Choose an operation (+, -, *, /): ");
+            System.out.print("Choose an operation (+, -, *, /, %): ");
             String operation = scanner.next();
             System.out.print("Enter the second number: ");
             double right = scanner.nextDouble();
@@ -46,6 +50,7 @@ public final class Calculator {
                 case "-" -> subtract(left, right);
                 case "*" -> multiply(left, right);
                 case "/" -> divide(left, right);
+                case "%" -> modulo(left, right);
                 default -> throw new IllegalArgumentException("Unsupported operation: " + operation);
             };
 

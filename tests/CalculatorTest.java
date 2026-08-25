@@ -35,6 +35,7 @@ public final class CalculatorTest {
         assertEquals(-1.0, Calculator.subtract(4.0, 5.0), "subtraction");
         assertEquals(20.0, Calculator.multiply(4.0, 5.0), "multiplication");
         assertEquals(2.5, Calculator.divide(5.0, 2.0), "division");
+        assertEquals(1.0, Calculator.modulo(10.0, 3.0), "modulo");
         assertThrows(
             () -> Calculator.divide(5.0, 0.0),
             "Division by zero is not allowed",

@@ -11,6 +11,7 @@ This repository contains a small Java command-line calculator created to demonst
 - Subtraction
 - Multiplication
 - Division
+- Modulo
 - Clear validation for division by zero
 - Automated tests without external dependencies
 
