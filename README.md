@@ -9,6 +9,7 @@ This repository contains a small Java command-line calculator created to demonst
 
 - Addition
 - Subtraction
+- Multiplication
 - Division
 - Automated tests without external dependencies
 
