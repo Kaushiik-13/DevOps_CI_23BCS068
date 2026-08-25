@@ -33,6 +33,8 @@ javac -d build src/Calculator.java tests/CalculatorTest.java
 java -cp build CalculatorTest
 ```
 
+The test command prints an individual PASS line for each operation and exits with a non-zero status if any assertion fails. This behaviour allows Jenkins to mark a failing test stage automatically.
+
 ## Run
 
 ```bash
