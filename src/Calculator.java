@@ -5,7 +5,7 @@ import java.util.Scanner;
  * Small command-line calculator used to demonstrate a complete DevOps CI workflow.
  */
 public final class Calculator {
-    public static final String APP_BANNER = "DevOps Calculator v1.0";
+    public static final String APP_BANNER = "DevOps Calculator v1.0 - Stable Division";
 
     private Calculator() {
         // Utility class.
@@ -20,6 +20,9 @@ public final class Calculator {
     }
 
     public static double divide(double left, double right) {
+        if (right == 0.0) {
+            throw new IllegalArgumentException("Division by zero is not allowed");
+        }
         return left / right;
     }
 
