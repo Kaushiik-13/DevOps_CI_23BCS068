@@ -5,7 +5,7 @@ import java.util.Scanner;
  * Small command-line calculator used to demonstrate a complete DevOps CI workflow.
  */
 public final class Calculator {
-    public static final String APP_BANNER = "DevOps Calculator v1.0 - Stable Division";
+    public static final String APP_BANNER = "DevOps Calculator v1.1 - Extended and Stable";
 
     private Calculator() {
         // Utility class.
@@ -17,6 +17,10 @@ public final class Calculator {
 
     public static double subtract(double left, double right) {
         return left - right;
+    }
+
+    public static double multiply(double left, double right) {
+        return left * right;
     }
 
     public static double divide(double left, double right) {
@@ -32,7 +36,7 @@ public final class Calculator {
             System.out.println(APP_BANNER);
             System.out.print("Enter the first number: ");
             double left = scanner.nextDouble();
-            System.out.print("Choose an operation (+, -, /): ");
+            System.out.print("Choose an operation (+, -, *, /): ");
             String operation = scanner.next();
             System.out.print("Enter the second number: ");
             double right = scanner.nextDouble();
@@ -40,6 +44,7 @@ public final class Calculator {
             double result = switch (operation) {
                 case "+" -> add(left, right);
                 case "-" -> subtract(left, right);
+                case "*" -> multiply(left, right);
                 case "/" -> divide(left, right);
                 default -> throw new IllegalArgumentException("Unsupported operation: " + operation);
             };
