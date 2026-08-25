@@ -1,0 +1,522 @@
+Script started on 2026-08-25 15:51:13+00:00 [COMMAND="bash -x /mnt/d/College/DevOps/evidence_assignment2_23BCS068/git_stage1.sh" <not executed on terminal>]
++ set -e
++ cd /mnt/d/College/DevOps/DevOps_CI_23BCS068
++ git.exe init -b main
+Initialized empty Git repository in D:/College/DevOps/DevOps_CI_23BCS068/.git/
++ git.exe config user.name 'Kaushiik A'
++ git.exe config user.email akkaushiik@gmail.com
++ git.exe status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.gitignore
+	README.md
+	src/
+	tests/
+
+nothing added to commit but untracked files present (use "git add" to track)
++ git.exe add .
+warning: in the working copy of '.gitignore', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/Calculator.java', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'tests/CalculatorTest.java', LF will be replaced by CRLF the next time Git touches it
++ git.exe status --short
+A  .gitignore
+A  README.md
+A  src/Calculator.java
+A  tests/CalculatorTest.java
++ git.exe commit -m 'Initial calculator application with tests'
+[main (root-commit) ee55dfa] Initial calculator application with tests
+ 4 files changed, 121 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 README.md
+ create mode 100644 src/Calculator.java
+ create mode 100644 tests/CalculatorTest.java
++ git.exe remote add origin https://github.com/Kaushiik-13/DevOps_CI_23BCS068.git
++ git.exe remote -v
+origin	https://github.com/Kaushiik-13/DevOps_CI_23BCS068.git (fetch)
+origin	https://github.com/Kaushiik-13/DevOps_CI_23BCS068.git (push)
++ git.exe push -u origin main
+branch 'main' set up to track 'origin/main'.
+To https://github.com/Kaushiik-13/DevOps_CI_23BCS068.git
+ * [new branch]      main -> main
++ cd /mnt/d/College/DevOps
++ git.exe clone https://github.com/Kaushiik-13/DevOps_CI_23BCS068.git DevOps_CI_23BCS068_clone
+Cloning into 'DevOps_CI_23BCS068_clone'...
++ cd /mnt/d/College/DevOps/DevOps_CI_23BCS068_clone
++ git.exe status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
++ git.exe log --oneline --decorate --graph --all
+* ee55dfa (HEAD -> main, origin/main, origin/HEAD) Initial calculator application with tests
+
+Script done on 2026-08-25 15:51:20+00:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-08-25 15:51:42+00:00 [COMMAND="bash -x /mnt/d/College/DevOps/evidence_assignment2_23BCS068/git_stage2.sh" <not executed on terminal>]
++ set -e
++ cd /mnt/d/College/DevOps/DevOps_CI_23BCS068_clone
++ git.exe status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
++ git.exe add README.md
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
++ git.exe commit -m 'Document Jenkins-friendly test behaviour'
+[main 4a12db2] Document Jenkins-friendly test behaviour
+ 1 file changed, 2 insertions(+)
++ git.exe push origin main
+To https://github.com/Kaushiik-13/DevOps_CI_23BCS068.git
+   ee55dfa..4a12db2  main -> main
++ cd /mnt/d/College/DevOps/DevOps_CI_23BCS068
++ git.exe status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
++ git.exe pull origin main
+From https://github.com/Kaushiik-13/DevOps_CI_23BCS068
+ * branch            main       -> FETCH_HEAD
+   ee55dfa..4a12db2  main       -> origin/main
+Updating ee55dfa..4a12db2
+Fast-forward
+ README.md | 2 ++
+ 1 file changed, 2 insertions(+)
++ git.exe log --oneline --decorate --graph --all
+* 4a12db2 (HEAD -> main, origin/main) Document Jenkins-friendly test behaviour
+* ee55dfa Initial calculator application with tests
+
+Script done on 2026-08-25 15:51:48+00:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-08-25 15:52:10+00:00 [COMMAND="bash -x /mnt/d/College/DevOps/evidence_assignment2_23BCS068/git_stage3_create_branches.sh" <not executed on terminal>]
++ set -e
++ cd /mnt/d/College/DevOps/DevOps_CI_23BCS068
++ git.exe switch main
+Your branch is up to date with 'origin/main'.
+Already on 'main'
++ git.exe pull --ff-only origin main
+From https://github.com/Kaushiik-13/DevOps_CI_23BCS068
+ * branch            main       -> FETCH_HEAD
+Already up to date.
++ git.exe branch feature-23BCS068 main
++ git.exe branch bugfix-23BCS068 main
++ git.exe branch --list
+  bugfix-23BCS068
+  feature-23BCS068
+* main
++ git.exe switch feature-23BCS068
+Switched to branch 'feature-23BCS068'
++ git.exe status
+On branch feature-23BCS068
+nothing to commit, working tree clean
+
+Script done on 2026-08-25 15:52:13+00:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-08-25 15:52:36+00:00 [COMMAND="bash -x /mnt/d/College/DevOps/evidence_assignment2_23BCS068/git_stage4_feature.sh" <not executed on terminal>]
++ set -e
++ cd /mnt/d/College/DevOps/DevOps_CI_23BCS068
++ git.exe status
+On branch feature-23BCS068
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   README.md
+	modified:   src/Calculator.java
+	modified:   tests/CalculatorTest.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
++ git.exe diff -- src/Calculator.java tests/CalculatorTest.java README.md
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/Calculator.java', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'tests/CalculatorTest.java', LF will be replaced by CRLF the next time Git touches it
+diff --git a/README.md b/README.md
+index 16d9b02..b2165c2 100644
+--- a/README.md
++++ b/README.md
+@@ -9,6 +9,7 @@ This repository contains a small Java command-line calculator created to demonst
+ 
+ - Addition
+ - Subtraction
++- Multiplication
+ - Division
+ - Automated tests without external dependencies
+ 
+diff --git a/src/Calculator.java b/src/Calculator.java
+index 5cb524b..1f3b50b 100644
+--- a/src/Calculator.java
++++ b/src/Calculator.java
+@@ -5,7 +5,7 @@ import java.util.Scanner;
+  * Small command-line calculator used to demonstrate a complete DevOps CI workflow.
+  */
+ public final class Calculator {
+-    public static final String APP_BANNER = "DevOps Calculator v1.0";
++    public static final String APP_BANNER = "DevOps Calculator v1.1 - Extended Operations";
+ 
+     private Calculator() {
+         // Utility class.
+@@ -19,6 +19,10 @@ public final class Calculator {
+         return left - right;
+     }
+ 
++    public static double multiply(double left, double right) {
++        return left * right;
++    }
++
+     public static double divide(double left, double right) {
+         return left / right;
+     }
+@@ -29,7 +33,7 @@ public final class Calculator {
+             System.out.println(APP_BANNER);
+             System.out.print("Enter the first number: ");
+             double left = scanner.nextDouble();
+-            System.out.print("Choose an operation (+, -, /): ");
++            System.out.print("Choose an operation (+, -, *, /): ");
+             String operation = scanner.next();
+             System.out.print("Enter the second number: ");
+             double right = scanner.nextDouble();
+@@ -37,6 +41,7 @@ public final class Calculator {
+             double result = switch (operation) {
+                 case "+" -> add(left, right);
+                 case "-" -> subtract(left, right);
++                case "*" -> multiply(left, right);
+                 case "/" -> divide(left, right);
+                 default -> throw new IllegalArgumentException("Unsupported operation: " + operation);
+             };
+diff --git a/tests/CalculatorTest.java b/tests/CalculatorTest.java
+index 59a619c..042624f 100644
+--- a/tests/CalculatorTest.java
++++ b/tests/CalculatorTest.java
+@@ -18,6 +18,7 @@ public final class CalculatorTest {
+     public static void main(String[] args) {
+         assertEquals(9.0, Calculator.add(4.0, 5.0), "addition");
+         assertEquals(-1.0, Calculator.subtract(4.0, 5.0), "subtraction");
++        assertEquals(20.0, Calculator.multiply(4.0, 5.0), "multiplication");
+         assertEquals(2.5, Calculator.divide(5.0, 2.0), "division");
+         System.out.println("All " + testsRun + " calculator tests passed.");
+     }
++ git.exe add src/Calculator.java tests/CalculatorTest.java README.md
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/Calculator.java', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'tests/CalculatorTest.java', LF will be replaced by CRLF the next time Git touches it
++ git.exe commit -m 'Add multiplication operation and automated test'
+[feature-23BCS068 42da81c] Add multiplication operation and automated test
+ 3 files changed, 9 insertions(+), 2 deletions(-)
++ git.exe log --oneline --decorate --graph --all
+* 42da81c (HEAD -> feature-23BCS068) Add multiplication operation and automated test
+* 4a12db2 (origin/main, main, bugfix-23BCS068) Document Jenkins-friendly test behaviour
+* ee55dfa Initial calculator application with tests
++ git.exe switch bugfix-23BCS068
+Switched to branch 'bugfix-23BCS068'
++ git.exe status
+On branch bugfix-23BCS068
+nothing to commit, working tree clean
+
+Script done on 2026-08-25 15:52:37+00:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-08-25 15:53:27+00:00 [COMMAND="bash -x /mnt/d/College/DevOps/evidence_assignment2_23BCS068/git_stage5_bugfix_and_conflict.sh" <not executed on terminal>]
++ set -e
++ cd /mnt/d/College/DevOps/DevOps_CI_23BCS068
++ git.exe status
+On branch bugfix-23BCS068
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   README.md
+	modified:   src/Calculator.java
+	modified:   tests/CalculatorTest.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
++ git.exe diff -- src/Calculator.java tests/CalculatorTest.java README.md
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/Calculator.java', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'tests/CalculatorTest.java', LF will be replaced by CRLF the next time Git touches it
+diff --git a/README.md b/README.md
+index 16d9b02..80dd17e 100644
+--- a/README.md
++++ b/README.md
+@@ -10,6 +10,7 @@ This repository contains a small Java command-line calculator created to demonst
+ - Addition
+ - Subtraction
+ - Division
++- Clear validation for division by zero
+ - Automated tests without external dependencies
+ 
+ ## Project structure
+diff --git a/src/Calculator.java b/src/Calculator.java
+index 5cb524b..80708a4 100644
+--- a/src/Calculator.java
++++ b/src/Calculator.java
+@@ -5,7 +5,7 @@ import java.util.Scanner;
+  * Small command-line calculator used to demonstrate a complete DevOps CI workflow.
+  */
+ public final class Calculator {
+-    public static final String APP_BANNER = "DevOps Calculator v1.0";
++    public static final String APP_BANNER = "DevOps Calculator v1.0 - Stable Division";
+ 
+     private Calculator() {
+         // Utility class.
+@@ -20,6 +20,9 @@ public final class Calculator {
+     }
+ 
+     public static double divide(double left, double right) {
++        if (right == 0.0) {
++            throw new IllegalArgumentException("Division by zero is not allowed");
++        }
+         return left / right;
+     }
+ 
+diff --git a/tests/CalculatorTest.java b/tests/CalculatorTest.java
+index 59a619c..28b0671 100644
+--- a/tests/CalculatorTest.java
++++ b/tests/CalculatorTest.java
+@@ -15,10 +15,30 @@ public final class CalculatorTest {
+         System.out.println("PASS: " + testName);
+     }
+ 
++    private static void assertThrows(Runnable action, String expectedMessage, String testName) {
++        testsRun++;
++        try {
++            action.run();
++            throw new AssertionError(testName + " failed: expected an exception");
++        } catch (IllegalArgumentException exception) {
++            if (!expectedMessage.equals(exception.getMessage())) {
++                throw new AssertionError(
++                    testName + " failed: unexpected message " + exception.getMessage()
++                );
++            }
++        }
++        System.out.println("PASS: " + testName);
++    }
++
+     public static void main(String[] args) {
+         assertEquals(9.0, Calculator.add(4.0, 5.0), "addition");
+         assertEquals(-1.0, Calculator.subtract(4.0, 5.0), "subtraction");
+         assertEquals(2.5, Calculator.divide(5.0, 2.0), "division");
++        assertThrows(
++            () -> Calculator.divide(5.0, 0.0),
++            "Division by zero is not allowed",
++            "division by zero validation"
++        );
+         System.out.println("All " + testsRun + " calculator tests passed.");
+     }
+ }
++ javac.exe -d build src/Calculator.java tests/CalculatorTest.java
++ java.exe -cp build CalculatorTest
+PASS: addition
+PASS: subtraction
+PASS: division
+PASS: division by zero validation
+All 4 calculator tests passed.
++ git.exe add src/Calculator.java tests/CalculatorTest.java README.md
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/Calculator.java', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'tests/CalculatorTest.java', LF will be replaced by CRLF the next time Git touches it
++ git.exe commit -m 'Validate division by zero with a clear error'
+[bugfix-23BCS068 269c6ef] Validate division by zero with a clear error
+ 3 files changed, 25 insertions(+), 1 deletion(-)
++ git.exe switch main
+Your branch is up to date with 'origin/main'.
+Switched to branch 'main'
++ git.exe merge --no-ff bugfix-23BCS068 -m 'Merge bugfix branch for safe division'
+Merge made by the 'ort' strategy.
+ README.md                 |  1 +
+ src/Calculator.java       |  5 ++++-
+ tests/CalculatorTest.java | 20 ++++++++++++++++++++
+ 3 files changed, 25 insertions(+), 1 deletion(-)
++ git.exe log --oneline --decorate --graph --all
+*   4e5eae7 (HEAD -> main) Merge bugfix branch for safe division
+|\  
+| * 269c6ef (bugfix-23BCS068) Validate division by zero with a clear error
+|/  
+| * 42da81c (feature-23BCS068) Add multiplication operation and automated test
+|/  
+* 4a12db2 (origin/main) Document Jenkins-friendly test behaviour
+* ee55dfa Initial calculator application with tests
++ git.exe switch feature-23BCS068
+Switched to branch 'feature-23BCS068'
++ set +e
++ git.exe merge main
+Auto-merging README.md
+Auto-merging src/Calculator.java
+CONFLICT (content): Merge conflict in src/Calculator.java
+Auto-merging tests/CalculatorTest.java
+Automatic merge failed; fix conflicts and then commit the result.
++ merge_code=1
++ set -e
++ echo 'Merge command exit code: 1 (non-zero confirms the conflict)'
+Merge command exit code: 1 (non-zero confirms the conflict)
++ git.exe status
+On branch feature-23BCS068
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Changes to be committed:
+	modified:   README.md
+	modified:   tests/CalculatorTest.java
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+	both modified:   src/Calculator.java
+
++ git.exe diff -- src/Calculator.java
+diff --cc src/Calculator.java
+index 1f3b50b,80708a4..0000000
+--- a/src/Calculator.java
++++ b/src/Calculator.java
+@@@ -5,7 -5,7 +5,11 @@@ import java.util.Scanner
+   * Small command-line calculator used to demonstrate a complete DevOps CI workflow.
+   */
+  public final class Calculator {
+++<<<<<<< HEAD
+ +    public static final String APP_BANNER = "DevOps Calculator v1.1 - Extended Operations";
+++=======
++     public static final String APP_BANNER = "DevOps Calculator v1.0 - Stable Division";
+++>>>>>>> main
+  
+      private Calculator() {
+          // Utility class.
+@@@ -19,11 -19,10 +23,14 @@@
+          return left - right;
+      }
+  
+ +    public static double multiply(double left, double right) {
+ +        return left * right;
+ +    }
+ +
+      public static double divide(double left, double right) {
++         if (right == 0.0) {
++             throw new IllegalArgumentException("Division by zero is not allowed");
++         }
+          return left / right;
+      }
+  
+
+Script done on 2026-08-25 15:53:33+00:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-08-25 15:54:08+00:00 [COMMAND="bash -x /mnt/d/College/DevOps/evidence_assignment2_23BCS068/git_stage6_resolve_and_push.sh" <not executed on terminal>]
++ set -e
++ cd /mnt/d/College/DevOps/DevOps_CI_23BCS068
++ git.exe diff --check
+warning: in the working copy of 'src/Calculator.java', LF will be replaced by CRLF the next time Git touches it
++ git.exe add src/Calculator.java
+warning: in the working copy of 'src/Calculator.java', LF will be replaced by CRLF the next time Git touches it
++ git.exe status
+On branch feature-23BCS068
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+	modified:   README.md
+	modified:   src/Calculator.java
+	modified:   tests/CalculatorTest.java
+
++ git.exe commit -m 'Resolve calculator banner merge conflict'
+[feature-23BCS068 e824dd3] Resolve calculator banner merge conflict
++ javac.exe -d build src/Calculator.java tests/CalculatorTest.java
++ java.exe -cp build CalculatorTest
+PASS: addition
+PASS: subtraction
+PASS: multiplication
+PASS: division
+PASS: division by zero validation
+All 5 calculator tests passed.
++ git.exe log --oneline --decorate --graph --all
+*   e824dd3 (HEAD -> feature-23BCS068) Resolve calculator banner merge conflict
+|\  
+| *   4e5eae7 (main) Merge bugfix branch for safe division
+| |\  
+| | * 269c6ef (bugfix-23BCS068) Validate division by zero with a clear error
+| |/  
+* / 42da81c Add multiplication operation and automated test
+|/  
+* 4a12db2 (origin/main) Document Jenkins-friendly test behaviour
+* ee55dfa Initial calculator application with tests
++ git.exe push origin main
+To https://github.com/Kaushiik-13/DevOps_CI_23BCS068.git
+   4a12db2..4e5eae7  main -> main
++ git.exe push -u origin feature-23BCS068
+remote: 
+remote: Create a pull request for 'feature-23BCS068' on GitHub by visiting:        
+remote:      https://github.com/Kaushiik-13/DevOps_CI_23BCS068/pull/new/feature-23BCS068        
+remote: 
+branch 'feature-23BCS068' set up to track 'origin/feature-23BCS068'.
+To https://github.com/Kaushiik-13/DevOps_CI_23BCS068.git
+ * [new branch]      feature-23BCS068 -> feature-23BCS068
++ git.exe branch -vv
+  bugfix-23BCS068  269c6ef Validate division by zero with a clear error
+* feature-23BCS068 e824dd3 [origin/feature-23BCS068] Resolve calculator banner merge conflict
+  main             4e5eae7 [origin/main] Merge bugfix branch for safe division
+
+Script done on 2026-08-25 15:54:19+00:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-08-25 15:57:57+00:00 [COMMAND="bash -x /mnt/d/College/DevOps/evidence_assignment2_23BCS068/git_stage7_pull_merged_main.sh" <not executed on terminal>]
++ set -e
++ cd /mnt/d/College/DevOps/DevOps_CI_23BCS068
++ git.exe switch main
+Your branch is up to date with 'origin/main'.
+Switched to branch 'main'
++ git.exe pull --ff-only origin main
+From https://github.com/Kaushiik-13/DevOps_CI_23BCS068
+ * branch            main       -> FETCH_HEAD
+   4e5eae7..00f833b  main       -> origin/main
+Updating 4e5eae7..00f833b
+Fast-forward
+ README.md                 | 1 +
+ src/Calculator.java       | 9 +++++++--
+ tests/CalculatorTest.java | 1 +
+ 3 files changed, 9 insertions(+), 2 deletions(-)
++ git.exe status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
++ git.exe show --stat --oneline HEAD
+00f833b Merge Pull Request #1: multiplication feature
+
+ README.md                 | 1 +
+ src/Calculator.java       | 9 +++++++--
+ tests/CalculatorTest.java | 1 +
+ 3 files changed, 9 insertions(+), 2 deletions(-)
++ javac.exe -d build src/Calculator.java tests/CalculatorTest.java
++ java.exe -cp build CalculatorTest
+PASS: addition
+PASS: subtraction
+PASS: multiplication
+PASS: division
+PASS: division by zero validation
+All 5 calculator tests passed.
++ git.exe log --oneline --decorate --graph --all
+*   00f833b (HEAD -> main, origin/main) Merge Pull Request #1: multiplication feature
+|\  
+| *   e824dd3 (origin/feature-23BCS068, feature-23BCS068) Resolve calculator banner merge conflict
+| |\  
+| |/  
+|/|   
+* |   4e5eae7 Merge bugfix branch for safe division
+|\ \  
+| * | 269c6ef (bugfix-23BCS068) Validate division by zero with a clear error
+|/ /  
+| * 42da81c Add multiplication operation and automated test
+|/  
+* 4a12db2 Document Jenkins-friendly test behaviour
+* ee55dfa Initial calculator application with tests
+
+Script done on 2026-08-25 15:58:02+00:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-08-25 15:58:37+00:00 [COMMAND="bash -x /mnt/d/College/DevOps/evidence_assignment2_23BCS068/git_stage8_finish.sh" <not executed on terminal>]
++ set -e
++ cd /mnt/d/College/DevOps/DevOps_CI_23BCS068
++ git.exe status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
++ echo 'Git activities and execution recording completed successfully.'
+Git activities and execution recording completed successfully.
++ exit 0
+
+Script done on 2026-08-25 15:58:38+00:00 [COMMAND_EXIT_CODE="0"]
